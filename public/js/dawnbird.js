@@ -30,7 +30,7 @@ $(document).ready( function (){
 	var nav = $('#navbar-top');
 	var mainNav = $('#navbar-main');
 	var callout = $('#call-out');
-
+	var subCallout = $('#sub-call-out');
 	$(window).scrollTop(contact.outerHeight());
 
 	$(window).scroll(function () {
@@ -62,13 +62,27 @@ $(document).ready( function (){
 		if( $(window).scrollTop() >= callout.offset().top-viewHeight/6*5) {
 			
 			callout.removeClass('bounceOut').addClass('animated bounceInDown');
-
+			window.setTimeout(function(){
+				subCallout.removeClass('bounceOut').css('visibility','visible').addClass('animated tada');
+			},500);
 		}
 		else
 		{
 			callout.removeClass('bounceInDown').addClass('bounceOut');
-			
+			subCallout.removeClass('tada').addClass('bounceOut');
 		}
+
+		$(".page-turner").each(function () {
+			if( $(window).scrollTop() >= $(this).offset().top-viewHeight/6*5) {
+			
+				$(this).removeClass('bounceOut').addClass('animated tada');
+
+			}
+			else
+			{
+				$(this).removeClass('tada').addClass('bounceOut');
+			}
+		});
 	});
 
 
