@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Mixture + Bootstrap{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{ "bootstrap.css" | asset_url | stylesheet_tag }}
+        {{ "font-awesome.css" | asset_url | stylesheet_tag }}
+        {{ "fonts/stylesheet.css" | asset_url | stylesheet_tag }}
+        {{ "dawnbird.css" | asset_url | stylesheet_tag }}
+        <!-- TODO: Complete this project :) -->
+    </head>
+    <body data-spy="scroll" data-target="#navbar-main">
+
+
+
+        {% block content %}{% endblock %}
+        
+        {{ "jquery.js" | asset_url | script_tag }}
+        {{ "bootstrap.js" | asset_url | script_tag }}
+        {{ "parallax.js" | asset_url | script_tag }}
+        {{ "dawnbird.js" | asset_url | script_tag }}
+    </body>
+</html>
