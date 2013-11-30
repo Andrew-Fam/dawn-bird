@@ -242,6 +242,26 @@ button.cta:hover {
   color: #15181a;
   background-color: #ff3737;
 }
+a.page-turner {
+  width: 140px;
+  height: 140px;
+  border-color: #f15a24;
+  border-width: 5px;
+  border-style: solid;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 140px;
+  padding: 20px;
+  font-family: "norwesterregular";
+  text-decoration: none;
+  text-align: center;
+  color: #f15a24;
+}
+a.page-turner:hover {
+  background-color: #f15a24;
+  color: white;
+}
 .content {
   min-height: 500px;
 }
