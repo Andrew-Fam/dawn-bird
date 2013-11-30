@@ -90,6 +90,9 @@ h1 {
     font-size: 60px;
   }
 }
+h3 {
+  color: #26b06d;
+}
 .contact {
   background-color: #ff3737;
 }
@@ -243,20 +246,21 @@ button.cta:hover {
   background-color: #ff3737;
 }
 a.page-turner {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   border-color: #f15a24;
   border-width: 5px;
   border-style: solid;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 140px;
+  border-radius: 999px;
   padding: 20px;
   font-family: "norwesterregular";
   text-decoration: none;
   text-align: center;
   color: #f15a24;
+  font-size: 24px;
 }
 a.page-turner:hover {
   background-color: #f15a24;
