@@ -32,7 +32,7 @@ $(document).ready( function (){
 	var callout = $('#call-out');
 	var subCallout = $('#sub-call-out');
 	$(window).scrollTop(contact.outerHeight());
-	$("#contact").css('visibility','visible');
+
 	$(window).scroll(function () {
 		// panel stack goes from bottom to top of document
 		if( $(window).scrollTop() >= hero.outerHeight()+nav.outerHeight()+intro.outerHeight()+contact.outerHeight()) {
@@ -99,5 +99,10 @@ $(document).ready( function (){
 	      }
 	    }
 	});
+
+
+
+
+	$("#contact").css('visibility','visible');
 });
 

@@ -57,6 +57,9 @@ article ul.feature-list li:before {
     padding: 24px;
   }
 }
+footer a {
+  color: #f15a24;
+}
 .sticky {
   position: fixed;
   top: 0px;
@@ -325,6 +328,17 @@ a.page-turner:hover {
 }
 .content {
   min-height: 500px;
+}
+@media (min-width: 1200px) {
+  .content article {
+    line-height: 48px;
+  }
+  .content article h1 {
+    font-size: 58px;
+  }
+  .content article li {
+    margin-bottom: 16px;
+  }
 }
 @media (min-width: 1200px) {
   .navbar-nav {
