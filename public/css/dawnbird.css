@@ -100,6 +100,9 @@ h1 {
 h3 {
   color: #26b06d;
 }
+#contact {
+  visibility: hidden;
+}
 .contact {
   background-color: #ff3737;
 }
