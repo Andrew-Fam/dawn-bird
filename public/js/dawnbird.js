@@ -1,21 +1,6 @@
-function disable_scroll() {
-  if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', wheel, false);
-  }
-  window.onmousewheel = document.onmousewheel = wheel;
-  document.onkeydown = keydown;
-}
-
-function enable_scroll() {
-    if (window.removeEventListener) {
-        window.removeEventListener('DOMMouseScroll', wheel, false);
-    }
-    window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
-}
-
 $(document).ready( function (){
 	
-
+	$('textarea').autosize();   
 
 	var scene = document.getElementById('scene');
 	var parallax = new Parallax(scene);
@@ -26,16 +11,38 @@ $(document).ready( function (){
 	var intro = $('.intro');
 	var contact = $('.contact');
 	var content = $('.content');
-	var hero = $('.hero');
+	var hero = $('.hero-place-holder');
+	var home = $('#home');
 	var nav = $('#navbar-top');
 	var mainNav = $('#navbar-main');
 	var callout = $('#call-out');
 	var subCallout = $('#sub-call-out');
-	$(window).scrollTop(contact.outerHeight());
 
-	$(window).scroll(function () {
+	var homePosition = mainNav.offset().top+mainNav.outerHeight()-viewHeight;
+
+	/* if there is hash don't scroll*/
+
+	if(window.location.hash) {
+		if(window.location.hash=="#home-anchor"){
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				$(window).scrollTop(home.offset().top);
+			} else {
+				$(window).scrollTop(homePosition);
+			}
+		} else{
+			scrollHandler();
+		}
+	} else {
+	 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		 	$(window).scrollTop(home.offset().top);
+		} else {
+			$(window).scrollTop(homePosition);
+		}
+	}
+
+	function scrollHandler() {
 		// panel stack goes from bottom to top of document
-		if( $(window).scrollTop() >= hero.outerHeight()+nav.outerHeight()+intro.outerHeight()+contact.outerHeight()) {
+		if( $(window).scrollTop() >= hero.outerHeight()+nav.outerHeight()+contact.outerHeight()) {
 			mainNav.addClass('sticky').css('margin-top',0).next().addClass('after-sticky').css('margin-top',mainNav.outerHeight());
 		} else
 		{
@@ -59,7 +66,7 @@ $(document).ready( function (){
 
 		// call out stack
 		
-		if( $(window).scrollTop() >= callout.offset().top-viewHeight/6*5) {
+		if( $(window).scrollTop() >= callout.offset().top-viewHeight) {
 			
 			callout.removeClass('bounceOut').addClass('animated bounceInDown');
 			window.setTimeout(function(){
@@ -83,20 +90,37 @@ $(document).ready( function (){
 				$(this).removeClass('tada').addClass('bounceOut');
 			}
 		});
+	}
+
+	$(window).scroll(function () {
+		scrollHandler();
 	});
 
 
 	//smooth anchor scroll as seen on css-tricks.com
-	$('a[href*=#]:not([href=#])').click(function() {
+	$('a[href*=#]:not([href=#])').click(function(e) {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 	      var target = $(this.hash);
+
 	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      
+
+
 	      if (target.length) {
-	        $('html,body').animate({
-	          scrollTop: target.offset().top
-	        }, 500);
-	        return false;
+	      	if(this.hash=="#home-anchor"){
+	      		$('html,body').animate({
+		          scrollTop: homePosition
+		        }, 500, scrollHandler);
+	      	} else {
+	      		$('html,body').animate({
+		          scrollTop: target.offset().top
+		        }, 500, scrollHandler);
+	      	}
+	      	history.replaceState(null, '', this.hash);
+		    return false;
 	      }
+
+
 	    }
 	});
 

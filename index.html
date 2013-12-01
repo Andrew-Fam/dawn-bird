@@ -36,7 +36,7 @@
 							Please select the type of enquiry
 						</option>
 						<option value="starter package">Starter Package - $750</option>
-						<option value="long-term business deal">Long-term business deal
+						<option value="custom business">Discuss custom requirements
 						</option>
 						<option value="chat">Just chit-chating
 						</option>
@@ -66,53 +66,26 @@
 			</div>
 		</article>
 	</section>
-	<nav id="navbar-top" class="navbar navbar-default" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			  <span class="sr-only">Toggle navigation</span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#"></a>
-		</div>
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-			  	<li class="active">
-					<a href="#navbar-top" title="intro">home</a>
-				</li>
-				<li>
-					<a href="#offers" title="pay up-front fee or make long-term biz agreement">my offer</a>
-				</li>
-				<li>
-					<a href="#bio" title="a bit about myself">bio</a>
-				</li>
-				<li>
-					<a href="#contact" title="contact da dawn bird!">get in touch!</a>
-				</li>
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</nav>
-	<section class="intro" >
-		<div class="container">
-			<div class="row">
-				<h1 class="col-lg-6">
-					HI, THIS IS DAWN BIRD from SYDNEY
-				</h1>
-				<div class="col-lg-6"> 
-					<p>
-						I create modern, user-friendly, and affordable websites starting from $700
-					</p>
-					<p>
-						<a href="#call-out-anchor">lemme tell ya</a>
-					</p>
+	<section class="hero" id="home">
+		<div class="intro" >
+			<div class="container">
+				<div class="row">
+					<a href="#bio" title="who is dawn bird?">
+						<h1>
+							HI, THIS IS DAWN BIRD from SYDNEY
+						</h1>
+					</a>
+					<div> 
+						<p>
+							I create modern, user-friendly, and affordable websites starting from $700
+						</p>
+						<p>
+							<a href="#business-opportunity" title="business opportunity with dawn bird">and much mooore</a>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<section class="hero">
 		<div id="call-out-anchor">
 		</div>
 		<div class="sun">
@@ -136,54 +109,59 @@
 		</div>
 		<img id="dawn-bird" src="public/img/dawn-bird-logo-branch-only.svg"/>
 		<div id="call-out" class="speech-box">
-			That&rsquo;s some damn good offer mate! <div class="triangle left"></div>
+			Got some great offers for u mate! <div class="triangle"></div>
 		</div>
-		<div id="sub-call-out" class="speech-box">
-			keep scrolling to find out why <div class="triangle left"></div>
-		</div>
+		<a href="#offers" id="sub-call-out" class="speech-box">
+			Click to find out what&rsquo;s on <div class="triangle"></div>
+		</a>
 	</section>
+	<div class="hero-place-holder" id="home-anchor">
+	</div>
+	<nav id="navbar-main"  class="navbar navbar-default" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"></a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li >
+					<a href="#home-anchor" title="intro">home</a>
+				</li>
+				<li class="active">
+					<a href="#offers" title="pay up-front fee or make long-term biz agreement">my offer</a>
+				</li>
+				<li>
+					<a href="#bio" title="a bit about myself">bio</a>
+				</li>
+				<li>
+					<a href="#contact" title="contact da dawn bird!">get in touch!</a>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
 	<section class="content" id="offers">
-		<nav id="navbar-main"  class="navbar navbar-inverse" role="navigation">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				  <span class="sr-only">Toggle navigation</span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#"></a>
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li >
-						<a href="#navbar-top" title="intro">home</a>
-					</li>
-					<li class="active">
-						<a href="#offers" title="pay up-front fee or make long-term biz agreement">my offer</a>
-					</li>
-					<li>
-						<a href="#bio" title="a bit about myself">bio</a>
-					</li>
-					<li>
-						<a href="#contact" title="contact da dawn bird!">get in touch!</a>
-					</li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</nav>
 		<article class="container first">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 pull-right">
+					<img src="public/img/package.svg"/>
+				</div>
+				<div class="col-sm-6 pull-left">
 					<h1>
-						Starter package for your bizness
+						What you will get
 					</h1>
 					<ul class="feature-list">
 						<li>
-							Business website with custom design and dynamic easy-to-update content powered by an in-house developed WordPress engine, paired with Timber plugin and Twig template engine
+							Business website with custom design and dynamic easy-to-update content powered by well-known CMS that will be <strong>picked to match your business needs.</strong>
 						</li>
 						<li>
-							Lifetime technical support over phone and TeamViewer for content updating instructions or bugs fix
+							<strong>Lifetime technical support</strong> over phone and TeamViewer for content updating instructions or bugs fix
 						</li>
 						<li>
 							Domain name and hosting assistant (hosting and domain registration cost not included)
@@ -198,14 +176,14 @@
 					</h3>
 					</a>
 				</div>
-				<div class="col-sm-6">
-					<img src="public/img/package.svg"/>
-				</div>
 			</div>
 		</article>
 		<article class="container" id="business-opportunity">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 pull-right">
+					<img src="public/img/business.svg"/>
+				</div>
+				<div class="col-sm-6 pull-left">
 					<h1>
 						I&rsquo;m not just doing this for a living, I am living it. (and love it too!)
 					</h1>
@@ -215,33 +193,32 @@
 					</p>
 					<p>
 						I love the internet much as you love your <strike>mom</strike> business.
-						You got the idea, I got the skillz, and there are more than one way we can make it work together. You can either pay a complete service fee up-front, and still get lifetime tech support from me, or you can <strong>let me be part of your start-up</strong>. We will work out our mathematics together over a cuppa coffee (or two, for that matter) to make sure every one wins. Which ever way, I&rsquo;m more than happy to be working with innovative and creative people, cuz, quite frankly, that&rsquo;s who I am too! Birds of the same feather flocks together ey!
+						You got the idea, I got the skillz, and there are more than one way we can make it work together. You can either pay a complete service fee up-front, and still get lifetime tech support from me, or you can <strong>let me be part of your start-up</strong>. We will work out our mathematics together over a cuppa coffee (or two, for that matter) to make sure every one wins. Whichever way, I&rsquo;m more than happy to be working with innovative and creative people, cuz, quite frankly, that&rsquo;s who I am too! Birds of the same feather flocks together ey!
 					</p>
 					<p>
 						This is Dawn Bird speaking to you from the love and dreams of the Internet.
 					</p>
 					<a href="#contact" class="cta"> You got me maan! Let&rsquo;s talk bizness! </a>
 				</div>
-				<div class="col-sm-6">
-					<img src="public/img/business.svg"/>
-				</div>
 			</div>
 		</article>
 	</section>
-	<a class="page-turner" href="#bio">
-		ah hah! There&rsquo;s still more stuffs below <i class=" fa-arrow-down fa"></i>
-	</a>
+	<div class="container">
+		<a class="page-turner" href="#bio">
+			ah hah! There&rsquo;s still more stuffs below <i class=" fa-arrow-down fa"></i>
+		</a>
+	</div>
 	<section class="content" id="bio">
 		<article class="container text-left">
 			<div class="row">
 				<div class="col-sm-6">
-					<h1>OK Now seriously, who is this "DAWN BIRD" guy?</h1>
-					<h3> some background info please! </h3>
+					<h1>OK now serious please, who is this "DAWN BIRD" guy?</h1>
+					<h3> some background info would be cool! </h3>
 					<p>
 						My name is Andrew. 
 					</p>
 					<p>
-						I studied Bachelor of IT at RMIT Melbourne, majored in Application programming, graduated with a 3.9 GPA, an Award of Academic Excellence, and am now living in Sydney to start my adventure.
+						I studied Bachelor of IT at RMIT Melbourne, majored in Application programming, graduated with an Award of Academic Excellence, and am now living in Sydney to start my adventure.
 					</p>
 					<h3> describe your self in 34 words</h3>
 					<p>
@@ -259,9 +236,6 @@
 						You look awesome today mate! Keep it up!
 					</p>
 					<a href="#contact" title="contact da dawn bird!" class="cta"> Contact me for business </a>
-					<p>
-						<a href="#navbar-top" title="back-to-top"> Back to top </a>
-					</p>
 				</div>
 			</div>
 		</article>
@@ -272,10 +246,13 @@
         <script src="public/js/jquery.min.js"></script>
         <script src="public/js/bootstrap.min.js"></script>
         <script src="public/js/parallax.min.js"></script>
+        <script src="public/js/jquery.autosize.min.js"></script>
         <script src="public/js/dawnbird.min.js"></script>
 
-        <footer class="container text-center">
-            2013<a href="https://plus.google.com/112302653530975295998?rel=author" title="google plus profile">© Dawn Bird</a>
+        <footer class="text-center">
+            <div class="container ">
+                2013<a href="https://plus.google.com/112302653530975295998?rel=author" title="google plus profile">© Dawn Bird</a>
+            </div>
         </footer>
     </body>
 </html>

@@ -3,17 +3,24 @@ html {
   overflow-x: hidden;
 }
 body {
-  font-weight: 100;
+  font-weight: 400;
 }
 form {
   color: #15181a;
+  padding-top: 16px;
 }
 form input,
 form select,
 form textarea {
+  /* default mobile first style */
   width: 100%;
+  max-width: 100%;
   border: none;
   color: #15181a;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  border-radius: 10px;
 }
 @media (min-width: 1200px) {
   form input,
@@ -37,6 +44,8 @@ form textarea {
   }
 }
 article ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 @media (min-width: 1200px) {
@@ -44,26 +53,28 @@ article ul {
     font-size: 24px;
   }
 }
-article ul.feature-list li:before {
-  font-family: 'FontAwesome';
-  content: '\f05d';
-  position: absolute;
-  left: 24px;
+footer {
+  position: relative;
+  z-index: 10000;
 }
 @media (min-width: 1200px) {
   footer {
     font-size: 24px;
-    color: #f15a24;
+    color: white;
     padding: 24px;
   }
 }
 footer a {
-  color: #f15a24;
+  color: #442a2c;
+}
+footer a:hover {
+  color: white;
+  text-decoration: none;
 }
 .sticky {
   position: fixed;
   top: 0px;
-  z-index: 1000;
+  z-index: 1000000;
   width: 100%;
 }
 .re-flow {
@@ -106,34 +117,57 @@ h1 {
 h3 {
   color: #26b06d;
 }
+/* nav styles */
+.navbar {
+  background: none!important;
+  z-index: 1000;
+}
 #contact {
   visibility: hidden;
 }
 .contact {
+  font-weight: 400;
+  position: relative;
+  z-index: 100;
   background-color: #ff3737;
 }
 .contact h1 {
   color: white;
+  margin-top: 16px;
 }
 .contact .cta {
-  background-color: none;
+  background-color: #fff;
   color: #15181a;
 }
 .contact a {
   color: white;
+}
+.contact .social-icon {
+  /* default style for small screen */
+  font-size: 24px;
 }
 @media (min-width: 1200px) {
   .contact .social-icon {
     font-size: 40px;
   }
 }
+.contact .social-icon:hover {
+  text-decoration: none;
+}
 .intro {
-  background: #15181a;
+  background: rgba(20, 23, 25, 0.97);
+  /* default style */
+  max-width: 40%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100000;
+  padding: 1%;
 }
 @media (min-width: 1200px) {
   .intro {
+    max-width: 30%;
     min-height: 250px;
-    padding-top: 58px;
   }
 }
 .intro p {
@@ -148,14 +182,33 @@ h3 {
 .intro a {
   color: #ff3737;
 }
+.hero-place-holder {
+  display: none;
+  position: relative;
+  z-index: 0;
+  height: 340px;
+}
+@media (min-width: 1200px) {
+  .hero-place-holder {
+    /* hero height - nav height to make nav visible */
+    display: block;
+    height: 600px;
+  }
+}
 .hero {
+  z-index: 1;
   position: relative;
   background-color: #64f5af;
+  width: 100%;
+  height: 460px;
   overflow: hidden;
 }
 @media (min-width: 1200px) {
   .hero {
-    height: 800px;
+    position: fixed;
+    height: 700px;
+    top: 0px;
+    left: 0px;
   }
 }
 .hero .container {
@@ -184,43 +237,57 @@ h3 {
 .hero .layer {
   z-index: 2;
 }
+#cloud1 {
+  position: absolute;
+}
 @media (min-width: 1200px) {
   #cloud1 {
-    position: absolute;
     top: 0px;
     left: -5%;
     width: 200px;
     height: auto;
   }
 }
+#cloud2 {
+  position: absolute;
+}
 @media (min-width: 1200px) {
   #cloud2 {
-    position: absolute;
     top: 10%;
     left: 65%;
     width: 20%;
     height: auto;
   }
 }
+#cloud3 {
+  position: absolute;
+}
 @media (min-width: 1200px) {
   #cloud3 {
-    position: absolute;
     top: 40%;
     left: 90%;
     width: 30%;
   }
 }
+#cloud4 {
+  position: absolute;
+}
 @media (min-width: 1200px) {
   #cloud4 {
-    position: absolute;
     top: 80%;
     left: 35%;
     width: 10%;
   }
 }
+#cloud5 {
+  position: absolute;
+  top: 40%;
+  left: -5%;
+  width: 70%;
+  height: auto;
+}
 @media (min-width: 1200px) {
   #cloud5 {
-    position: absolute;
     top: 40%;
     left: -55%;
     width: 70%;
@@ -231,16 +298,30 @@ h3 {
   position: absolute;
   left: 0px;
   bottom: 0px;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  #dawn-bird {
+    width: 80%;
+  }
 }
 #call-out {
-  background-color: #ff3737;
+  background: rgba(255, 56, 56, 0.9);
   font-family: "norwesterregular";
+  position: absolute;
+  left: 55%;
+  top: 13%;
+  font-size: 16px;
+  max-width: 40%;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 @media (min-width: 1200px) {
   #call-out {
     position: absolute;
-    left: 40%;
-    top: 40%;
+    left: 55%;
+    top: 10%;
     font-size: 60px;
     max-width: 40%;
     padding-left: 24px;
@@ -248,47 +329,89 @@ h3 {
     padding-bottom: 24px;
   }
 }
-#call-out .triangle.left {
-  border-right-color: #ff3737;
-  top: 60%;
+#call-out .triangle {
+  border-color: transparent;
+  border-style: solid;
+  border-top-color: rgba(255, 56, 56, 0.9);
+  border-top-width: 10px;
+  border-bottom-width: 0px;
+  border-right-width: 10px;
+  border-left-width: 10px;
+  bottom: -10px;
+  left: 15%;
 }
 @media (min-width: 1200px) {
-  #call-out .triangle.left {
-    left: -19px;
+  #call-out .triangle {
+    left: -20px;
+    border-top-color: transparent;
+    border-right-color: rgba(255, 56, 56, 0.9);
+    border-top-width: 20px;
+    border-left-width: 0px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    top: 60%;
   }
 }
 #sub-call-out {
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
-  background-color: #15181a;
+  background-color: rgba(20, 23, 25, 0.9);
   color: #ff3737;
   font-family: "norwesterregular";
+  left: 55%;
+  top: 35%;
+  font-size: 16px;
+  max-width: 40%;
+  padding: 12px;
 }
 @media (min-width: 1200px) {
   #sub-call-out {
-    left: 40%;
-    top: 70%;
+    visibility: hidden;
+    left: 55%;
+    top: 45%;
     font-size: 30px;
     max-width: 40%;
     padding: 24px;
   }
 }
-#sub-call-out .triangle.left {
-  border-right-color: #15181a;
-  top: 30%;
+#sub-call-out .triangle {
+  border-color: transparent;
+  border-style: solid;
+  border-top-color: rgba(20, 23, 25, 0.9);
+  border-top-width: 10px;
+  border-bottom-width: 0px;
+  border-right-width: 10px;
+  border-left-width: 10px;
+  bottom: -10px;
+  left: 15%;
 }
 @media (min-width: 1200px) {
-  #sub-call-out .triangle.left {
-    left: -19px;
+  #sub-call-out .triangle {
+    border-top-color: transparent;
+    left: -20px;
+    border-right-color: rgba(20, 23, 25, 0.9);
+    border-top-width: 20px;
+    border-left-width: 0px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    top: 30%;
   }
 }
 a.cta,
 button.cta {
-  display: inline-block;
+  /* default mobile first style */
+  display: block;
   font-family: "norwesterregular";
   color: #ff3737;
   border-color: #15181a;
   text-decoration: none;
+  font-size: 20px;
+  padding: 24px;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: solid;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (min-width: 1200px) {
   a.cta,
@@ -298,12 +421,16 @@ button.cta {
     border-radius: 10px;
     border-width: 5px;
     border-style: solid;
+    margin: 0;
   }
 }
 a.cta:hover,
 button.cta:hover {
   color: #15181a;
   background-color: #ff3737;
+}
+a.cta {
+  display: inline-block;
 }
 a.page-turner {
   width: 200px;
@@ -326,12 +453,39 @@ a.page-turner:hover {
   background-color: #f15a24;
   color: white;
 }
+@media (min-width: 1200px) {
+  a.page-turner {
+    margin: 0;
+  }
+}
 .content {
+  position: relative;
+  background-color: white;
+  z-index: 100;
   min-height: 500px;
+}
+.content article {
+  /* default style */
+  max-width: 80%;
+  line-height: 24px;
+}
+.content article h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.content article h3 {
+  font-size: 20px;
+}
+.content article li {
+  margin-bottom: 16px;
 }
 @media (min-width: 1200px) {
   .content article {
+    text-align: left;
     line-height: 48px;
+  }
+  .content article h3 {
+    font-size: 24px;
   }
   .content article h1 {
     font-size: 58px;
