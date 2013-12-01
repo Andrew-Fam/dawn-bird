@@ -2,6 +2,9 @@ html {
   max-width: 100%;
   overflow-x: hidden;
 }
+body {
+  font-weight: 100;
+}
 form {
   color: #15181a;
 }
