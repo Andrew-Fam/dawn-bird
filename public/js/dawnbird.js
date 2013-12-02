@@ -1,5 +1,7 @@
 $(document).ready( function (){
 	
+
+
 	$('textarea').autosize();   
 
 	var scene = document.getElementById('scene');
@@ -27,9 +29,16 @@ $(document).ready( function (){
 	var mainNav = $('#navbar-main');
 	var callout = $('#call-out');
 	var subCallout = $('#sub-call-out');
+
+
+	callout.removeClass('bounceOut').addClass('animated bounceInDown');
+	window.setTimeout(function(){
+		subCallout.removeClass('bounceOut').css('visibility','visible').addClass('animated tada');
+	},500);	
+	
 	function homePosition() {
 
-		return  hero.offset().top;
+		return  contact.outerHeight();
 	}
 	/* if there is hash don't scroll*/
 
@@ -62,20 +71,7 @@ $(document).ready( function (){
 			mainNav.removeClass('sticky').css('margin-top','');
 		} 
 
-		// call out stack
 		
-		if( $(window).scrollTop() >= callout.offset().top-viewHeight()) {
-			
-			callout.removeClass('bounceOut').addClass('animated bounceInDown');
-			window.setTimeout(function(){
-				subCallout.removeClass('bounceOut').css('visibility','visible').addClass('animated tada');
-			},500);
-		}
-		else
-		{
-			callout.removeClass('bounceInDown').addClass('bounceOut');
-			subCallout.removeClass('tada').addClass('bounceOut');
-		}
 
 		$(".page-turner").each(function () {
 			if( $(window).scrollTop() >= $(this).offset().top-viewHeight()/6*5) {
@@ -88,6 +84,14 @@ $(document).ready( function (){
 				$(this).removeClass('tada').addClass('bounceOut');
 			}
 		});
+
+
+		if( $(window).scrollTop() >= hero.offset().top-100){
+			$('.navbar-toggle').removeClass('alternate');
+      	}
+      	else{
+      		$('.navbar-toggle').addClass('alternate');
+      	}
 	}
 
 	$(window).scroll(function () {
@@ -136,6 +140,19 @@ $(document).ready( function (){
 	$("#contact").css('visibility','visible');
 
 	// handle resize
+
+	window.addEventListener("orientationchange", function() {
+		console.log('orientation change');
+		$('.hero-place-holder').each(function () {
+			$(this).css('height',viewHeight());
+		});
+		// reset scrollspy, cuz this motherfucker somehow doesn't work properly after resize
+		$('[data-spy="scroll"]').each(function () {
+		  $(this).scrollspy('refresh');
+		});
+
+	}, false);
+
 	$(window).resize(function(){
 		console.log('resized');
 		$('.hero-place-holder').each(function () {
@@ -149,5 +166,28 @@ $(document).ready( function (){
 	});
 
 	scrollHandler();
+
+	$(document).click(function(e) {
+
+	    $("#main-nav").removeClass('in').addClass('collapse');
+
+	});
+
+	// call out stack
+	
+
+	/*if( $(window).scrollTop() >= contact.outerHeight()) {
+		
+		callout.removeClass('bounceOut').addClass('animated bounceInDown');
+		window.setTimeout(function(){
+			subCallout.removeClass('bounceOut').css('visibility','visible').addClass('animated tada');
+		},500);
+	}
+	else
+	{
+		callout.removeClass('bounceInDown').addClass('bounceOut');
+		subCallout.removeClass('tada').addClass('bounceOut');
+	}*/
 });
+
 

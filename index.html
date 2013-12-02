@@ -28,7 +28,7 @@
 	<section class="contact" id="contact">
 		<article class="container">
 			<div class="row">
-				<form name="contact" class="col-sm-6">
+				<form name="contact" class=" contact-column col-sm-6">
 					<input type="email" name="email" placeholder="your@email.address" required/>
 					<input type="text" name="name" placeholder="your name"/>
 					<select name="enquiry">
@@ -44,13 +44,16 @@
 					<textarea name="message" placeholder="Let me know how I can help you" required></textarea>
 					<button class="cta">Sign, Seal, Send it!</button>
 				</form>
-				<div class="col-sm-6">
-					<h1>Let&rsquo;s get it cracking! </h1>
+				<div class="contact-column col-sm-6">
+					<h1>Get it cracking! </h1>
 					<p>
+						You can get a more detail quote by submitting this form or contact me directly by my email. I'll get back to you in no time.
+					</p>
+					<p>	
 						Feel free to discuss business, ideas, strategies, pricing, and uh.. world peace? etc (End of Thinking Capacity). Or if you feel that the text on this page is ridiculously big, hit me up:).
 					</p>
 					<p>
-						email: <a>andrew.fam@dawnbird.me</a>
+						email: <a href="mailto:andrew.fam@dawnbird.me">andrew.fam@dawnbird.me</a>
 					</p>
 					<p>
 						phone: <a>045 217 7891</a>
@@ -69,14 +72,14 @@
 	<nav id="navbar-main"  class="navbar navbar-default" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
 			  <span class="sr-only">Toggle navigation</span>
-			 	<i class="fa fa-compass fa-3x"></i>
+			 	<i class="fa fa-compass fa-2x"></i> <span>menu</span> 
 			</button>
 			<a class="navbar-brand" href="#"></a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<div class="collapse navbar-collapse" id="main-nav">
 			<ul class="nav navbar-nav navbar-right">
 				<li >
 					<a href="#home-anchor" title="intro">home</a>
@@ -117,34 +120,86 @@
 		</div>
 		<div class="sun">
 		</div>
-		<div class="container" id="scene">
+		<div id="scene">
 			<div  class="layer" data-depth="0.10">
 				<img id="cloud1" src="public/img/cloud1.svg"/>
 			</div>
-			<div  class="layer" data-depth="0.15">
+			<div  class="layer" data-depth="0.20">
 				<img id="cloud2" src="public/img/cloud2.svg"/>
 			</div>
-			<div  class="layer" data-depth="0.20">
+			<div  class="layer" data-depth="0.40">
 				<img id="cloud3" src="public/img/cloud3.svg"/>
 			</div>
-			<div  class="layer" data-depth="0.05">
+			<div  class="layer" data-depth="0.15">
 				<img id="cloud4" src="public/img/cloud4.svg"/>
 			</div>
-			<div  class="layer" data-depth="0.02">
+			<div  class="layer" data-depth="0.12">
 				<img id="cloud5" src="public/img/cloud4.svg"/>
 			</div>
+			<div class="layer" data-depth="0.00" >
+				<img id="dawn-bird" src="public/img/dawn-bird-logo-branch-only.svg"/>
+			</div>
 		</div>
-		<img id="dawn-bird" src="public/img/dawn-bird-logo-branch-only.svg"/>
-		<div id="call-out" class="speech-box">
+		<a href="#offers" id="call-out" class="speech-box">
 			Got some great offers for u mate! <div class="triangle"></div>
-		</div>
-		<a href="#offers" id="sub-call-out" class="speech-box">
-			Click to find out what&rsquo;s on <div class="triangle"></div>
+		</a>
+		<a href="#samples" id="sub-call-out" class="speech-box">
+			Check out the samples too! <div class="triangle"></div>
 		</a>
 	</section>
 	<div class="hero-place-holder" id="home-anchor">
 	</div>
 	<section class="content" >
+		<article class="container first" id="samples">
+			<div class="row">
+				<div class="col-sm-6 pull-left">
+					<h1>
+						A picture tells more than a thousand words
+					</h1>
+					<p>
+						And I that's exactly what I wanna do: show you how I do stuffs before running my mouth.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<ul class="row portfolio">
+						<li class="col-sm-4">
+							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
+						</li>
+						<li class="col-sm-4">
+							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
+						</li>
+						<li class="col-sm-4">
+							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
+						</li>	
+					</ul>
+					<ul class="row portfolio">
+						<li class="col-sm-4">
+							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
+						</li>
+						<li class="col-sm-4">
+							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
+						</li>
+						<li class="col-sm-4">
+							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
+						</li>	
+					</ul>
+					<ul class="row portfolio">
+						<li class="col-sm-4">
+							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
+						</li>
+						<li class="col-sm-4">
+							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
+						</li>
+						<li class="col-sm-4">
+							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
+						</li>	
+					</ul>
+				</div>
+				<a href="#offers" class="cta"> Great stuffs! How much will it cost me? </a>
+			</div>
+		</article>
 		<article class="container first" id="offers">
 			<div class="row">
 				<div class="col-sm-6 pull-right">
@@ -159,7 +214,10 @@
 							Business website with custom design and dynamic easy-to-update content powered by well-known CMS that will be <strong>picked to match your business needs.</strong>
 						</li>
 						<li>
-							<strong>Lifetime technical support</strong> over phone and TeamViewer for content updating instructions or bugs fix
+							Custom-made graphics and logos on demand.
+						</li>
+						<li>
+							<strong>Lifetime technical support</strong> over phone and TeamViewer for content updating or bugs fix
 						</li>
 						<li>
 							Domain name and hosting assistant (hosting and domain registration cost not included)
@@ -168,7 +226,7 @@
 					<h2>
 						All for $700 ! 
 					</h2>
-					<a href="#contact" class="cta"> Seriously snatch it now! </a>
+					<a href="#contact" class="cta"> Lovely, let&rsquo;s do it! </a>
 					<a href="#business-opportunity"><h3>
 						or better yet, keep reading...
 					</h3>
@@ -190,13 +248,10 @@
 						I can&rsquo;t do it, honestly can&rsquo;t. But what I lack in business skills, I more than make up for with my eye for good UI patterns and designs. That&rsquo;s why <strong>we should team up</strong>. Now the story gets interesting...;)  
 					</p>
 					<p>
-						I love the internet much as you love your <strike>mom</strike> business.
+						I love the internet much as you love your business.
 						You got the idea, I got the skillz, and there are more than one way we can make it work together. You can either pay a complete service fee up-front, and still get lifetime tech support from me, or you can <strong>let me be part of your start-up</strong>. We will work out our mathematics together over a cuppa coffee (or two, for that matter) to make sure every one wins. Whichever way, I&rsquo;m more than happy to be working with innovative and creative people, cuz, quite frankly, that&rsquo;s who I am too! Birds of the same feather flocks together ey!
 					</p>
-					<p>
-						This is Dawn Bird speaking to you from the love and dreams of the Internet.
-					</p>
-					<a href="#contact" class="cta"> You got me maan! Let&rsquo;s talk bizness! </a>
+					<a href="#contact" class="cta"> Brilliant! Let&rsquo;s grab a cuppa </a>
 				</div>
 			</div>
 		</article>
@@ -208,7 +263,7 @@
 		<article class="container text-left" id="bio">
 			<div class="row">
 				<div class="col-sm-6">
-					<h1>OK now serious please, who is this "DAWN BIRD" guy?</h1>
+					<h1>Ok now serious please, who is this "Dawn Bird" guy?</h1>
 					<h3> some background info would be cool! </h3>
 					<p>
 						My name is Andrew. 
@@ -247,7 +302,9 @@
         <script type="text/javascript" src="public/js/dawnbird.js"></script>
         <footer class="text-center">
             <div class="container ">
-                2013<a href="https://plus.google.com/112302653530975295998?rel=author" title="google plus profile">© Dawn Bird</a>
+                <span>
+                    2013<a href="https://plus.google.com/112302653530975295998?rel=author" title="google plus profile">© Dawn Bird</a>
+                </span>
             </div>
         </footer>
     </body>
