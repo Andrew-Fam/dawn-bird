@@ -4,10 +4,20 @@ $(document).ready( function (){
 
 	var scene = document.getElementById('scene');
 	var parallax = new Parallax(scene);
-
-	var viewWidth = $(window).width();
-	var viewHeight = $(window).height();
 	
+	function viewHeight() {
+		return $(window).height();
+	}
+
+	function viewWidth() {
+		return $(window).width();
+	}
+
+	$('.hero-place-holder').each(function () {
+		$(this).css('height',viewHeight());
+	});
+
+
 	var intro = $('.intro');
 	var contact = $('.contact');
 	var content = $('.content');
@@ -17,56 +27,44 @@ $(document).ready( function (){
 	var mainNav = $('#navbar-main');
 	var callout = $('#call-out');
 	var subCallout = $('#sub-call-out');
+	function homePosition() {
 
-	var homePosition = mainNav.offset().top+mainNav.outerHeight()-viewHeight;
-
+		return  hero.offset().top;
+	}
 	/* if there is hash don't scroll*/
 
 	if(window.location.hash) {
 		if(window.location.hash=="#home-anchor"){
-			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-				$(window).scrollTop(home.offset().top);
-			} else {
-				$(window).scrollTop(homePosition);
-			}
-		} else{
-			scrollHandler();
+
+			$(window).scrollTop(homePosition());
+
 		}
 	} else {
-	 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		 	$(window).scrollTop(home.offset().top);
-		} else {
-			$(window).scrollTop(homePosition);
-		}
+		$(window).scrollTop(homePosition());
 	}
 
+	
+
 	function scrollHandler() {
+		var intro = $('.intro');
+		var contact = $('.contact');
+		var content = $('.content');
+		var hero = $('.hero-place-holder');
+		var home = $('#home');
+		var mainNav = $('#navbar-main');
+		var callout = $('#call-out');
+		var subCallout = $('#sub-call-out');
 		// panel stack goes from bottom to top of document
 		if( $(window).scrollTop() >= hero.outerHeight()+nav.outerHeight()+contact.outerHeight()) {
-			mainNav.addClass('sticky').css('margin-top',0).next().addClass('after-sticky').css('margin-top',mainNav.outerHeight());
+			mainNav.addClass('sticky').css('margin-top',0);
 		} else
 		{
-			mainNav.removeClass('sticky').css('margin-top','').next().removeClass('after-sticky').css('margin-top','');
+			mainNav.removeClass('sticky').css('margin-top','');
 		} 
-		
-		/*if( $(window).scrollTop() >= hero.outerHeight()+nav.outerHeight()) {
-			//console.log('haaaa?');
-			
-			intro.removeClass('sticky').addClass('re-flow').css('margin-top',hero.outerHeight());
-		} else {
-			intro.addClass('sticky').removeClass('re-flow').css('margin-top',0).next().addClass('after-sticky').css('margin-top',intro.outerHeight());
-		}
-
-		if( $(window).scrollTop() >= intro.prev().outerHeight() ){
-			//console.log('yeah');
-		} else{
-			//console.log('nigga what');
-			intro.removeClass('sticky').next().removeClass('after-sticky').css('margin-top','');
-		} */
 
 		// call out stack
 		
-		if( $(window).scrollTop() >= callout.offset().top-viewHeight) {
+		if( $(window).scrollTop() >= callout.offset().top-viewHeight()) {
 			
 			callout.removeClass('bounceOut').addClass('animated bounceInDown');
 			window.setTimeout(function(){
@@ -80,7 +78,7 @@ $(document).ready( function (){
 		}
 
 		$(".page-turner").each(function () {
-			if( $(window).scrollTop() >= $(this).offset().top-viewHeight/6*5) {
+			if( $(window).scrollTop() >= $(this).offset().top-viewHeight()/6*5) {
 			
 				$(this).removeClass('bounceOut').addClass('animated tada');
 
@@ -107,10 +105,18 @@ $(document).ready( function (){
 
 
 	      if (target.length) {
+	      	if(this.hash=="#contact") {
+	      		$('.navbar-toggle').addClass('alternate');
+	      	}
+	      	else{
+	      		$('.navbar-toggle').removeClass('alternate');
+	      	}
 	      	if(this.hash=="#home-anchor"){
 	      		$('html,body').animate({
-		          scrollTop: homePosition
+		          scrollTop: homePosition()
 		        }, 500, scrollHandler);
+
+		        console.log(homePosition());
 	      	} else {
 	      		$('html,body').animate({
 		          scrollTop: target.offset().top
@@ -128,5 +134,20 @@ $(document).ready( function (){
 
 
 	$("#contact").css('visibility','visible');
+
+	// handle resize
+	$(window).resize(function(){
+		console.log('resized');
+		$('.hero-place-holder').each(function () {
+			$(this).css('height',viewHeight());
+		});
+		// reset scrollspy, cuz this motherfucker somehow doesn't work properly after resize
+		$('[data-spy="scroll"]').each(function () {
+		  $(this).scrollspy('refresh');
+		});
+
+	});
+
+	scrollHandler();
 });
 

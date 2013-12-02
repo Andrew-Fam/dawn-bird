@@ -1,8 +1,10 @@
 html {
+  position: relative;
   max-width: 100%;
   overflow-x: hidden;
 }
 body {
+  position: relative;
   font-weight: 400;
 }
 form {
@@ -32,6 +34,10 @@ form textarea {
     border-radius: 10px;
   }
 }
+article {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
 @media (min-width: 1200px) {
   article {
     padding-top: 128px;
@@ -56,6 +62,7 @@ article ul {
 footer {
   position: relative;
   z-index: 10000;
+  padding: 12px;
 }
 @media (min-width: 1200px) {
   footer {
@@ -70,12 +77,6 @@ footer a {
 footer a:hover {
   color: white;
   text-decoration: none;
-}
-.sticky {
-  position: fixed;
-  top: 0px;
-  z-index: 1000000;
-  width: 100%;
 }
 .re-flow {
   position: absolute;
@@ -119,8 +120,53 @@ h3 {
 }
 /* nav styles */
 .navbar {
+  position: fixed;
+  top: 0px;
+  z-index: 1000000;
+  width: 100%;
   background: none!important;
-  z-index: 1000;
+  z-index: 800;
+}
+.navbar-header {
+  border: none;
+}
+.navbar-toggle {
+  padding: 0;
+  margin: 12px;
+  border: none;
+  color: #ff3737;
+}
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+  background: none!important;
+  color: #15181a;
+}
+.navbar-toggle.alternate {
+  color: #fff;
+}
+.navbar-brand {
+  padding: 0;
+}
+.navbar-collapse {
+  box-shadow: none;
+  border: none;
+}
+.navbar-collapse.in ul,
+.navbar-collapse.collapsing ul {
+  max-width: 40%;
+  float: right;
+  background: #15181a;
+  margin-top: 0;
+}
+.navbar-collapse.in ul li.active a,
+.navbar-collapse.collapsing ul li.active a {
+  color: white!important;
+  font-weight: 400;
+  background: #ff3737 !important;
+}
+.navbar-collapse.in ul li a,
+.navbar-collapse.collapsing ul li a {
+  color: #fffabd !important;
 }
 #contact {
   visibility: hidden;
@@ -130,6 +176,7 @@ h3 {
   position: relative;
   z-index: 100;
   background-color: #ff3737;
+  padding: 16px;
 }
 .contact h1 {
   color: white;
@@ -154,6 +201,11 @@ h3 {
 .contact .social-icon:hover {
   text-decoration: none;
 }
+@media (min-width: 1200px) {
+  .contact {
+    padding: 24px;
+  }
+}
 .intro {
   background: rgba(20, 23, 25, 0.97);
   /* default style */
@@ -170,6 +222,16 @@ h3 {
     min-height: 250px;
   }
 }
+@media (min-width: 1650px) {
+  .intro {
+    max-width: 30%;
+  }
+}
+@media (min-width: 1650px) {
+  .intro h1 {
+    font-size: 90px;
+  }
+}
 .intro p {
   font-weight: 100;
   color: #fffabd;
@@ -179,34 +241,40 @@ h3 {
     font-size: 30px;
   }
 }
+@media (min-width: 1650px) {
+  .intro p {
+    font-size: 40px;
+  }
+}
 .intro a {
   color: #ff3737;
 }
 .hero-place-holder {
-  display: none;
   position: relative;
   z-index: 0;
-  height: 340px;
+  height: 110%;
 }
 @media (min-width: 1200px) {
   .hero-place-holder {
     /* hero height - nav height to make nav visible */
     display: block;
-    height: 600px;
+    height: 100%;
   }
 }
 .hero {
   z-index: 1;
-  position: relative;
+  position: fixed;
   background-color: #64f5af;
   width: 100%;
-  height: 460px;
+  height: 110%;
+  top: 0px;
+  left: 0px;
   overflow: hidden;
 }
 @media (min-width: 1200px) {
   .hero {
     position: fixed;
-    height: 700px;
+    height: 100%;
     top: 0px;
     left: 0px;
   }
@@ -239,6 +307,10 @@ h3 {
 }
 #cloud1 {
   position: absolute;
+  top: 0px;
+  left: -5%;
+  width: 200px;
+  height: auto;
 }
 @media (min-width: 1200px) {
   #cloud1 {
@@ -250,6 +322,10 @@ h3 {
 }
 #cloud2 {
   position: absolute;
+  top: 10%;
+  left: 65%;
+  width: 20%;
+  height: auto;
 }
 @media (min-width: 1200px) {
   #cloud2 {
@@ -261,6 +337,9 @@ h3 {
 }
 #cloud3 {
   position: absolute;
+  top: 40%;
+  left: 90%;
+  width: 30%;
 }
 @media (min-width: 1200px) {
   #cloud3 {
@@ -271,6 +350,9 @@ h3 {
 }
 #cloud4 {
   position: absolute;
+  top: 80%;
+  left: 35%;
+  width: 10%;
 }
 @media (min-width: 1200px) {
   #cloud4 {
@@ -310,23 +392,19 @@ h3 {
   font-family: "norwesterregular";
   position: absolute;
   left: 55%;
-  top: 13%;
+  top: 100px;
   font-size: 16px;
   max-width: 40%;
-  padding-left: 12px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px;
 }
 @media (min-width: 1200px) {
   #call-out {
     position: absolute;
     left: 55%;
-    top: 10%;
+    top: 120px;
     font-size: 60px;
-    max-width: 40%;
-    padding-left: 24px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    max-width: 550px;
+    padding: 24px;
   }
 }
 #call-out .triangle {
@@ -359,7 +437,7 @@ h3 {
   color: #ff3737;
   font-family: "norwesterregular";
   left: 55%;
-  top: 35%;
+  top: 206px;
   font-size: 16px;
   max-width: 40%;
   padding: 12px;
@@ -368,9 +446,9 @@ h3 {
   #sub-call-out {
     visibility: hidden;
     left: 55%;
-    top: 45%;
+    top: 350px;
     font-size: 30px;
-    max-width: 40%;
+    max-width: 550px;
     padding: 24px;
   }
 }
@@ -433,6 +511,8 @@ a.cta {
   display: inline-block;
 }
 a.page-turner {
+  position: relative;
+  z-index: 1000;
   width: 200px;
   height: 200px;
   border-color: #f15a24;
@@ -461,10 +541,12 @@ a.page-turner:hover {
 .content {
   position: relative;
   background-color: white;
-  z-index: 100;
+  z-index: 200;
   min-height: 500px;
 }
 .content article {
+  position: relative;
+  z-index: 500;
   /* default style */
   max-width: 80%;
   line-height: 24px;
