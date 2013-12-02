@@ -227,7 +227,7 @@ h3 {
   color: #ff3737;
   font-size: 16px;
 }
-@media (min-width: 321px) {
+@media (min-width: 480px) {
   .contact .cta {
     font-size: 24px;
     float: right;
@@ -236,7 +236,7 @@ h3 {
 .contact a {
   color: white;
 }
-@media (min-width: 321px) {
+@media (min-width: 480px) {
   .contact .contact-column {
     max-width: 50%;
     float: left;
