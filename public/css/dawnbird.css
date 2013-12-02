@@ -73,6 +73,10 @@ article ul {
     font-size: 24px;
   }
 }
+article ul.feature-list li {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
 footer {
   position: relative;
   z-index: 10000;
@@ -182,10 +186,15 @@ h3 {
 }
 .navbar-collapse.in ul,
 .navbar-collapse.collapsing ul {
-  max-width: 40%;
+  max-width: 50%;
   float: right;
   background: #15181a;
   margin-top: 0;
+  padding: 0;
+}
+.navbar-collapse.in ul li,
+.navbar-collapse.collapsing ul li {
+  padding: 0;
 }
 .navbar-collapse.in ul li.active a,
 .navbar-collapse.collapsing ul li.active a {
@@ -195,6 +204,8 @@ h3 {
 }
 .navbar-collapse.in ul li a,
 .navbar-collapse.collapsing ul li a {
+  padding: 12px;
+  font-weight: 300;
   color: #fffabd !important;
 }
 #contact {
@@ -216,7 +227,7 @@ h3 {
   color: #ff3737;
   font-size: 16px;
 }
-@media (min-width: 320px) {
+@media (min-width: 321px) {
   .contact .cta {
     font-size: 24px;
     float: right;
@@ -225,7 +236,7 @@ h3 {
 .contact a {
   color: white;
 }
-@media (min-width: 320px) {
+@media (min-width: 321px) {
   .contact .contact-column {
     max-width: 50%;
     float: left;
@@ -460,7 +471,7 @@ h3 {
   padding: 12px;
   color: #15181a;
 }
-@media (max-height: 320px) {
+@media (max-height: 321px) {
   #call-out {
     top: 70px;
     left: 65%;
@@ -498,7 +509,7 @@ h3 {
   bottom: -10px;
   left: 15%;
 }
-@media (max-height: 320px) {
+@media (max-height: 321px) {
   #call-out .triangle {
     left: -10px;
     top: 30%;
@@ -534,7 +545,7 @@ h3 {
   max-width: 40%;
   padding: 12px;
 }
-@media (max-height: 320px) {
+@media (max-height: 321px) {
   #sub-call-out {
     top: 160px;
     left: 65%;
@@ -582,7 +593,7 @@ h3 {
   bottom: -10px;
   left: 15%;
 }
-@media (max-height: 320px) {
+@media (max-height: 321px) {
   #sub-call-out .triangle {
     left: -10px;
     top: 30%;
