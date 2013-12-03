@@ -1,12 +1,12 @@
 $(document).ready( function (){
 	
 
-
+	
 	$('textarea').autosize();   
 
-	var scene = document.getElementById('scene');
+	/*var scene = document.getElementById('scene');
 	var parallax = new Parallax(scene);
-	
+	*/
 	function viewHeight() {
 		return $(window).height();
 	}
@@ -27,15 +27,15 @@ $(document).ready( function (){
 	var home = $('#home');
 	var nav = $('#navbar-top');
 	var mainNav = $('#navbar-main');
-	var callout = $('#call-out');
-	var subCallout = $('#sub-call-out');
+	var callout = $('.call-out');
+	var subCallout = $('.sub-call-out');
 
 
 	callout.removeClass('bounceOut').addClass('animated bounceInDown');
 	window.setTimeout(function(){
 		subCallout.removeClass('bounceOut').css('visibility','visible').addClass('animated tada');
 	},500);	
-	
+
 	function homePosition() {
 
 		return  contact.outerHeight();
@@ -61,8 +61,8 @@ $(document).ready( function (){
 		var hero = $('.hero-place-holder');
 		var home = $('#home');
 		var mainNav = $('#navbar-main');
-		var callout = $('#call-out');
-		var subCallout = $('#sub-call-out');
+		var callout = $('.call-out');
+		var subCallout = $('.sub-call-out');
 		// panel stack goes from bottom to top of document
 		if( $(window).scrollTop() >= hero.outerHeight()+nav.outerHeight()+contact.outerHeight()) {
 			mainNav.addClass('sticky').css('margin-top',0);
@@ -167,27 +167,12 @@ $(document).ready( function (){
 
 	scrollHandler();
 
-	$(document).click(function(e) {
+	$(document).on('click',function(e) {
 
 	    $("#main-nav").removeClass('in').addClass('collapse');
 
 	});
 
-	// call out stack
 	
-
-	/*if( $(window).scrollTop() >= contact.outerHeight()) {
-		
-		callout.removeClass('bounceOut').addClass('animated bounceInDown');
-		window.setTimeout(function(){
-			subCallout.removeClass('bounceOut').css('visibility','visible').addClass('animated tada');
-		},500);
-	}
-	else
-	{
-		callout.removeClass('bounceInDown').addClass('bounceOut');
-		subCallout.removeClass('tada').addClass('bounceOut');
-	}*/
 });
-
 
