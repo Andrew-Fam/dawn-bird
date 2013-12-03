@@ -25,282 +25,228 @@
     <body data-spy="scroll" data-target="#navbar-main">
 
         
-	<section class="contact" id="contact">
-		<article class="container">
-			<div class="row">
-				<form name="contact" class=" contact-column col-sm-6">
-					<input type="email" name="email" placeholder="your@email.address" required/>
-					<input type="text" name="name" placeholder="your name"/>
-					<select name="enquiry">
-						<option value="">
-							Please select the type of enquiry
-						</option>
-						<option value="starter package">Starter Package - $700</option>
-						<option value="custom business">Discuss custom requirements
-						</option>
-						<option value="chat">Just chit-chating
-						</option>
-					</select>
-					<textarea name="message" placeholder="Let me know how I can help you" required></textarea>
-					<button class="cta">Sign, Seal, Send it!</button>
-				</form>
-				<div class="contact-column col-sm-6">
-					<h1>Get it cracking! </h1>
-					<p>
-						You can get a more detail quote by submitting this form or contact me directly by my email. I'll get back to you in no time.
-					</p>
-					<p>	
-						Feel free to discuss business, ideas, strategies, pricing, and uh.. world peace? etc (End of Thinking Capacity). Or if you feel that the text on this page is ridiculously big, hit me up:).
-					</p>
-					<p>
-						email: <a href="mailto:andrew.fam@dawnbird.me">andrew.fam@dawnbird.me</a>
-					</p>
-					<p>
-						phone: <a>045 217 7891</a>
-					</p>
-					<p>
-					Find me on social networks
-					</p>
-					<p>
-						<a href="https://plus.google.com/112302653530975295998" class="social-icon fa fa-google-plus-square" title="dawnbird on google plus" rel="me"></a>
-						<a href="https://www.facebook.com/dawnbird.sydney" class="social-icon fa fa-facebook-square" title="dawnbird on facebook"></a>
-					</p>
-				</div>
-			</div>
-		</article>
-	</section>
-	<nav id="navbar-main"  class="navbar navbar-default" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-			  <span class="sr-only">Toggle navigation</span>
-			 	<i class="fa fa-compass fa-2x"></i> <span>menu</span> 
-			</button>
+<div class="scene" >
+	<div id="sky"  class="layer" >
+	</div>
+	<div id="sun" data-0="background-size: 30% auto;" data-3000="background-size: 60% auto;"class="layer" >
+	</div>
+	<div id="forest" data-0="margin-top: 0%; background-position: center bottom; background-size: 100% auto;" data-1000=" margin-top: 5%; background-position: center bottom; background-size: 150% auto;" data-2000="margin-top: 15%;  background-position: center bottom; background-size: 320% auto;" data-3000="margin-top: 40%;  background-position: center bottom; background-size: 400% auto;" class="layer">
+	</div>
+	<div class="tree-left-wrap" 
+		data-0="top: 0%;" 
+		data-1000="top: 5%;"
+		data-2000="top: 15%;"
+		data-3000="top: 30%;"
+	>
+		<div class="tree-left" skrollr-repeat id="tree-left-1"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="0"
+			data-loop="1000"
+			data-repeat="3"
+			> 
 		</div>
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="main-nav">
-			<ul class="nav navbar-nav navbar-right">
-				<li >
-					<a href="#home-anchor" title="intro">home</a>
-				</li>
-				<li>
-					<a href="#samples" title="samples">samples</a>
-				</li>
-				<li class="active">
-					<a href="#offers" title="pay up-front fee or make long-term biz agreement">my offer</a>
-				</li>
-				<li>
-					<a href="#bio" title="a bit about myself">bio</a>
-				</li>
-				<li>
-					<a href="#contact" title="contact da dawn bird!">get in touch!</a>
-				</li>
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</nav>
-	<section class="hero" id="home">
-		<div id="scene">
-			<div id="sky" class="layer" >
-			</div>
-			<div id="sun" class="layer" >
-			</div>
-			<div id="clouds" class="layer" >
-			</div>
-			<div id="forest" class="layer" >
-			</div>
-			<div id="dawn-bird" class="layer" >
-			</div>
-			<div class="layer" id="tree">
-			</div>
+		<div class="tree-left" skrollr-repeat id="tree-left-1"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="0"
+			data-loop="1000"
+			data-repeat="3"
+			> 
 		</div>
-	</section>
-	<div class="hero-place-holder" id="home-anchor">
-		<div class="row"> 
-			<div class="col-sm-6">
-				<div class="intro" >
-					<a href="#bio" title="who is dawn bird?">
-						<h1>
-							HI, THIS IS DAWN BIRD from SYDNEY
-						</h1>
-					</a>
-					<div> 
-						<p>
-							I create modern, user-friendly, and affordable websites starting from $700
-						</p>
-						<p>
-							<a href="#business-opportunity" title="business opportunity with dawn bird">and much more to offer</a>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6">
-				<div class="call-out-wrap">
-					<a href="#offers"  class="call-out speech-box">
-						Bring your business online quickly!
-					</a>
-					<a href="#samples"  class="sub-call-out speech-box">
-						Check out the samples first! <div class="triangle"></div>
-					</a>
-				</div>
-			</div>
+		<div class="tree-left" skrollr-repeat id="tree-left-2"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="100"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-left" skrollr-repeat id="tree-left-3"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="200"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-left" skrollr-repeat id="tree-left-4"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="300"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-left" skrollr-repeat id="tree-left-5"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="400"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-left" skrollr-repeat id="tree-left-6"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="500"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-left" skrollr-repeat id="tree-left-7"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="600"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-left" skrollr-repeat id="tree-left-8"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="700"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-left" skrollr-repeat id="tree-left-9"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="800"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-left" skrollr-repeat id="tree-left-10"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="900"
+			data-loop="1000"
+			data-repeat="3"
+			> 
 		</div>
 	</div>
-	<section class="content" >
-		<article class="container first" id="samples">
-			<div class="row">
-				<div class="col-lg-6 pull-left">
-					<h1>
-						A picture tells more than a thousand words
-					</h1>
-					<p>
-						And that's exactly why I'm gonna show you how I do stuffs first before running my mouth.
-					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<ul class="row portfolio">
-						<li class="col-md-4">
-							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
-						</li>
-						<li class="col-md-4">
-							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
-						</li>
-						<li class="col-md-4">
-							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
-						</li>	
-					</ul>
-					<ul class="row portfolio">
-						<li class="col-md-4">
-							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
-						</li>
-						<li class="col-md-4">
-							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
-						</li>
-						<li class="col-md-4">
-							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
-						</li>	
-					</ul>
-					<ul class="row portfolio">
-						<li class="col-md-4">
-							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
-						</li>
-						<li class="col-md-4">
-							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
-						</li>
-						<li class="col-md-4">
-							<a href="index.html"><img src="http://placehold.it/400x500"/></a>
-						</li>	
-					</ul>
-				</div>
-				<div class="container text-center">
-					<a href="#offers" class="cta"> Great stuffs! How much will it cost me? </a>
-				</div>
-			</div>
-		</article>
-		<article class="container first" id="offers">
-			<div class="row">
-				<div class="col-lg-6 pull-right">
-					<img src="public/img/package.svg"/>
-				</div>
-				<div class="col-lg-6 pull-left">
-					<ul class="price-table">
-						<li class="header">
-							<h1>
-								Website starter package
-							</h1>
-							<p>suitable for most small/start-up business or individuals</p>
-						</li>
-						<li>
-							Business website with custom design and dynamic easy-to-update content powered by well-known CMS that will be <strong>picked to match your business needs.</strong>
-						</li>
-						<li>
-							Custom-made graphics and logos on demand.
-						</li>
-						<li>
-							<strong>Lifetime technical support</strong> on phone and TeamViewer for content updating or bugs fix
-						</li>
-						<li>
-							Domain name and hosting assistant (hosting and domain registration cost not included)
-						</li>
-						<li class="price">
-							Starting from $700 ! 
-						</li>
-						<li>
-							<a href="#contact" class="cta package"> Lovely, let&rsquo;s do it! </a>
-						</li>
-					</ul>
-					<a href="#business-opportunity">
-						<h3>
-							or better yet, keep reading...
-						</h3>
-					</a>
-				</div>
-			</div>
-		</article>
-		<article class="container" id="business-opportunity">
-			<div class="row">
-				<div class="col-lg-6 pull-right">
-					<img src="public/img/business.svg"/>
-				</div>
-				<div class="col-lg-6 pull-left">
-					<h1>
-						I&rsquo;m not just doing this for a living, I am living it. (and love it too!)
-					</h1>
-					<p>
-						I admire people who do business, big or small. It takes alot of courage and masterminding to stand behind your business. Yes I&rsquo;m talking about you!
-					</p>
-					<p>
-						I can&rsquo;t do it, honestly can&rsquo;t. But what I lack in business skills, I more than make up for with my eye for good UI patterns and designs. That&rsquo;s why <strong>we should team up</strong>. Now the story gets interesting...;)  
-					</p>
-					<p>
-						I love the internet much as you love your business.
-						You got the idea, I got the skillz, and there are more than one way we can make it work together. You can either pay a complete service fee up-front, and still get lifetime tech support from me, or you can <strong>let me be part of your start-up</strong>. You provide the business requirements and ideas, I will make it happen. We will work out our mathematics together over a cuppa coffee (or two, for that matter) to make sure every one wins.
-					</p>
-					<p>
-						Whether you choose to hire me for a one-off service or want to do long-term business with me, you will definitely benefit from my passion and skills, no matter if you are a writer wanting to publish their work online in a beautiful and content focused design, a business owner who wish to bring your business online and sell, or an artist who wants to show case your work in an innovative way. I'd love to make it all happen for you.
-					</p>
-					<a href="#contact" class="cta negotiate"> Brilliant! Let&rsquo;s meet up! </a>
-					<a href="#contact" class="cta package"> Thanks, the package is good enough for me! </a>
-				</div>
-			</div>
-		</article>
-		<div class="container page-turner-wrap">
-			<a class="page-turner" href="#bio">
-				Ah hah! There&rsquo;s still more stuffs down here! <i class=" fa-arrow-down fa"></i>
-			</a>
+	<div class="tree-right-wrap" 
+		data-0="top: 0%;" 
+		data-1000="top: 5%;"
+		data-2000="top: 15%;"
+		data-3000="top: 30%;"
+	>
+		<div class="tree-right" skrollr-repeat id="tree-right-1"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="0"
+			data-loop="1000"
+			data-repeat="3"
+			> 
 		</div>
-		<article class="container text-left" id="bio">
-			<div class="row">
-				<div class="col-lg-6">
-					<h1>Ok we've got along well so far, but &ldquo;Who is this &lsquo;Dawn Bird&rsquo; guy? &rdquo; you might ask.</h1>
-					<h3> some background info would be cool! </h3>
-					<p>
-						My name is Andrew. 
-					</p>
-					<p>
-						I studied Bachelor of IT at RMIT Melbourne, majored in Application programming, graduated with an Award of Academic Excellence, and am now living in Sydney to start my adventure.
-					</p>
-					<h3> describe yourself in 34 words</h3>
-					<p>
-						Gimmicks aside, I am a down-to-earth friendly guy that you can count on when it comes to web design/development. I treat every project, whether mine or yours&rsquo; with the same passion. 
-					</p>
-					<h3> what&rsquo;s your working philosophy </h3>
-					<p>
-						The inter-web is like a global gallery of art. The art of effective and impressive digital communication. It is our job to contribute to the value of the big gallery. Ok, not entirely true, because in the end it all boils down to profit profit profit! 
-					</p>
-					<p>
-						But really, combining art with profit is my goal. If you share the same perspective, then we&rsquo;re good! Otherwise, we&rsquo;re still very good, cuz I don&rsquo;t like to force my idealism down other people&rsquo;s throat. In other words, whether you&rsquo;re looking for a conventional time-proven business web, or you&rsquo;re an artist who&rsquo;s got over-the-top ideas and concept, I am the guy to turn to.
-					</p>
-					<h3> anything else you&rsquo;d like to say before I&rsquo;m done with your website? </h3>
-					<p>
-						You look awesome today mate! Keep it up!
-					</p>
-					<a href="#contact" title="contact da dawn bird!" class="cta"> Contact me for business </a>
-				</div>
-			</div>
-		</article>
-	</section>
+		<div class="tree-right" skrollr-repeat id="tree-right-1"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="0"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-right" skrollr-repeat id="tree-right-2"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="100"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-right" skrollr-repeat id="tree-right-3"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="200"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-right" skrollr-repeat id="tree-right-4"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="300"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-right" skrollr-repeat id="tree-right-5"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="400"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-right" skrollr-repeat id="tree-right-6"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="500"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-right" skrollr-repeat id="tree-right-7"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="600"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-right" skrollr-repeat id="tree-right-8"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="700"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-right" skrollr-repeat id="tree-right-9"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="800"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+		<div class="tree-right" skrollr-repeat id="tree-right-10"
+			data-easing="linear"
+			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
+			data-unit="%"
+			data-offset="900"
+			data-loop="1000"
+			data-repeat="3"
+			> 
+		</div>
+	</div>
+</div>
+<section style="height: 500px; width: 100%;">
+</section>
 
 
 
