@@ -31,8 +31,6 @@ body {
 }
 .scene .layer {
   position: absolute;
-  top: 0px;
-  left: 0px;
   height: 100%;
   width: 100%;
 }
@@ -41,17 +39,19 @@ body {
   background-repeat: no-repeat;
   background-position: 100% 100%;
   background-size: cover;
+  overflow: hidden;
 }
 #sun {
+  position: absolute;
   background-image: url('../img/sun.svg');
   background-repeat: no-repeat;
   background-position: 50% 100%;
-  background-size: 50% auto;
+  background-size: auto 100%;
 }
 #clouds {
-  background-image: url('../img/clouds.svg');
+  background-image: url('../img/cloud.svg');
   background-repeat: no-repeat;
-  background-position: 50% 100%;
+  background-position: center bottom;
   background-size: cover;
 }
 #forest {
@@ -72,7 +72,7 @@ body {
   height: 100%;
   position: absolute;
   top: 0%;
-  left: 10%;
+  left: 5%;
   background-repeat: no-repeat;
   background-size: 80% auto;
   background-position: center bottom;
@@ -119,7 +119,7 @@ body {
   height: 100%;
   position: absolute;
   top: 0%;
-  right: 10%;
+  right: 5%;
   background-repeat: no-repeat;
   background-size: 80% auto;
   background-position: center bottom;

@@ -26,114 +26,134 @@
 
         
 <div class="scene" >
-	<div id="sky"  class="layer" >
+	<div id="sky"
+		data-3000="height: 120%; bottom: 0%;"  
+		data-4000="height: 120%; bottom: 0%;"
+		data-6000="height: 160%; bottom: 0%;"
+		data-9000="bottom: 0%;"
+		data-12000="bottom: 20%;"
+		class="layer" >
+		<div id="sun" 
+			data-0="top:20%;"   
+			data-4000="top:20%;"
+			data-6000="top:20%;"
+			data-9000="top:20%;"
+			class="layer">
+		</div>
+		<div id="clouds" class="layer"
+			data-0="background-position: 50% 100%"
+			data-4000="background-position: 50% 80%"
+			data-6000="background-position: 50% -10%; background-size: 100% auto;" 
+			data-7500="background-position: 50% -40%; background-size: 100% auto;" 
+			data-8000="background-position: 50% 0%; background-size: 100% auto;" 
+			data-9000="background-position: 50% 100%; background-size: 100% auto;" 
+			data-12000="background-size: 100% auto;" 
+		>
+		</div>
 	</div>
-	<div id="sun" data-0="background-size: 30% auto;" data-3000="background-size: 60% auto;"class="layer" >
-	</div>
-	<div id="forest" data-0="margin-top: 0%; background-position: center bottom; background-size: 100% auto;" data-1000=" margin-top: 5%; background-position: center bottom; background-size: 150% auto;" data-2000="margin-top: 15%;  background-position: center bottom; background-size: 320% auto;" data-3000="margin-top: 40%;  background-position: center bottom; background-size: 400% auto;" class="layer">
+	<div id="forest" 
+		data-0="margin-top: 0%; background-position: center bottom; background-size: 100% auto;" 
+		data-1000=" margin-top: 10%; background-position: center bottom; background-size: 150% auto;" 
+		data-2000="margin-top: 15%;  background-position: center bottom; background-size: 250% auto;" 
+		data-3000="margin-top: 20%;  background-position: center bottom; background-size: 400% auto;"
+		data-4000="margin-top: 60%;  background-position: center bottom; background-size: 600% auto;"
+		 class="layer">
 	</div>
 	<div class="tree-left-wrap" 
 		data-0="top: 0%;" 
 		data-1000="top: 5%;"
 		data-2000="top: 15%;"
 		data-3000="top: 30%;"
+		data-4000="top: 35%;"
+		data-5000="top: 60%;"
 	>
 		<div class="tree-left" skrollr-repeat id="tree-left-1"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
 			data-offset="0"
-			data-loop="1000"
-			data-repeat="3"
-			> 
-		</div>
-		<div class="tree-left" skrollr-repeat id="tree-left-1"
-			data-easing="linear"
-			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
-			data-unit="%"
-			data-offset="0"
-			data-loop="1000"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-left" skrollr-repeat id="tree-left-2"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="100"
-			data-loop="1000"
+			data-offset="300"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-left" skrollr-repeat id="tree-left-3"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="200"
-			data-loop="1000"
+			data-offset="600"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-left" skrollr-repeat id="tree-left-4"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="300"
-			data-loop="1000"
+			data-offset="900"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-left" skrollr-repeat id="tree-left-5"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="400"
-			data-loop="1000"
+			data-offset="1200"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-left" skrollr-repeat id="tree-left-6"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="500"
-			data-loop="1000"
+			data-offset="1500"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-left" skrollr-repeat id="tree-left-7"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="600"
-			data-loop="1000"
+			data-offset="1800"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-left" skrollr-repeat id="tree-left-8"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="700"
-			data-loop="1000"
+			data-offset="2100"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-left" skrollr-repeat id="tree-left-9"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="800"
-			data-loop="1000"
+			data-offset="2400"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-left" skrollr-repeat id="tree-left-10"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-right","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="900"
-			data-loop="1000"
+			data-offset="2700"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
@@ -143,103 +163,96 @@
 		data-1000="top: 5%;"
 		data-2000="top: 15%;"
 		data-3000="top: 30%;"
+		data-4000="top: 35%;"
+		data-5000="top: 60%;"
 	>
 		<div class="tree-right" skrollr-repeat id="tree-right-1"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
 			data-offset="0"
-			data-loop="1000"
-			data-repeat="3"
-			> 
-		</div>
-		<div class="tree-right" skrollr-repeat id="tree-right-1"
-			data-easing="linear"
-			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
-			data-unit="%"
-			data-offset="0"
-			data-loop="1000"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-right" skrollr-repeat id="tree-right-2"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="100"
-			data-loop="1000"
+			data-offset="300"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-right" skrollr-repeat id="tree-right-3"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="200"
-			data-loop="1000"
+			data-offset="600"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-right" skrollr-repeat id="tree-right-4"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="300"
-			data-loop="1000"
+			data-offset="900"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-right" skrollr-repeat id="tree-right-5"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="400"
-			data-loop="1000"
+			data-offset="1200"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-right" skrollr-repeat id="tree-right-6"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="500"
-			data-loop="1000"
+			data-offset="1500"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-right" skrollr-repeat id="tree-right-7"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="600"
-			data-loop="1000"
+			data-offset="1800"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-right" skrollr-repeat id="tree-right-8"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="700"
-			data-loop="1000"
+			data-offset="2100"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-right" skrollr-repeat id="tree-right-9"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="800"
-			data-loop="1000"
+			data-offset="2400"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
 		<div class="tree-right" skrollr-repeat id="tree-right-10"
-			data-easing="linear"
+			data-easing="cubic"
 			data-properties='{"properties":[{"property":"width","start":"0","end":"100"},{"property":"margin-left","start":"0","end":"60"},{"property":"margin-top","start":"-5","end":"20"}]}'
 			data-unit="%"
-			data-offset="900"
-			data-loop="1000"
+			data-offset="2700"
+			data-loop="3000"
 			data-repeat="3"
 			> 
 		</div>
