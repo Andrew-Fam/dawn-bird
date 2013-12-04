@@ -57,8 +57,7 @@ body {
 #forest {
   background-image: url('../img/forest.svg');
   background-repeat: no-repeat;
-  background-position: 50% 140%;
-  background-size: auto 80%;
+  background-position: center bottom;
 }
 .tree-right-wrap {
   width: 50%;
